@@ -1,0 +1,14 @@
+<form [formGroup]="profileCourse" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input required formControlName="name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Description</label>
+    <input required formControlName="description" type="description" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <input required formControlName="price" type="price" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button [disabled]="!profileCourse.valid" type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,17 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" [routerLink]="['/']">HOME</a>
+          <a class="nav-link active" [routerLink]="['/courses']">COURSES</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

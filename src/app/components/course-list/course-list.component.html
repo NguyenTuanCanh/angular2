@@ -1,0 +1,25 @@
+<button type="button" class="btn btn-primary" [routerLink]="['/courses/add']"
+  [ngStyle]="{'margin-top': 10 + 'px', 'margin-bottom' : 10 + 'px'}">Primary</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="courses.length>0">
+    <tr *ngFor="let item of courses">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.price }}</td>
+      <td>
+        <button [routerLink]="['/courses/edit/'+item.id]" [style.margin-right.px]="10" type="button"
+          class="btn btn-success aa">EDIT</button>
+        <button (click)="deleteCourse(item.id)" type="button" class="btn btn-danger">DELETE</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
